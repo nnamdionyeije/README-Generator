@@ -1,72 +1,63 @@
-// Imported required packages
+// TODO: Include packages needed for this application
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// Array of questions for user input
+// TODO: Create an array of questions for user input
 const questions = [
   {
     type: 'input',
-    name: 'github',
-    message: 'What is your GitHub username?',
-  },
-  {
-    type: 'input',
-    name: 'email',
-    message: 'What is your email address?',
-  },
-  {
-    type: 'input',
     name: 'title',
-    message: "What is your project's name?",
+    message: 'What is the title of your project?',
   },
   {
     type: 'input',
     name: 'description',
-    message: 'Please write a short description of your project',
-  },
-  {
-    type: 'list',
-    name: 'license',
-    message: 'What kind of license should your project have?',
-    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
+    message: 'Enter a description of your project.',
   },
   {
     type: 'input',
     name: 'installation',
-    message: 'What command should be run to install dependencies?',
-    default: 'npm i',
-  },
-  {
-    type: 'input',
-    name: 'test',
-    message: 'What command should be run to run tests?',
-    default: 'npm test',
+    message: 'Please enter the installation instructions for your application',
   },
   {
     type: 'input',
     name: 'usage',
-    message: 'What does the user need to know about using the repo?',
+    message: 'Please enter the usage information for your application',
   },
   {
     type: 'input',
-    name: 'contributing',
-    message: 'What does the user need to know about contributing to the repo?',
+    name: 'contribution',
+    message: 'Pleas enter any important information about contributing to this repository',
+  },
+  {
+    type: 'input',
+    name: 'test',
+    message: 'What test instructions should the user know about?',
+  },
+  {
+    type: 'list',
+    name: 'license',
+    message: ['APACHE 2.0', 'BSD 3', 'GPL 3.0', 'MIT', 'None'],
+  },
+  {
+    type: 'input',
+    name: 'username',
+    message: 'Please enter your GitHub username',
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message: 'Please enter your email address',
   },
 ];
 
-// Function to write README file using the user input
-function writeToFile(fileName, data) {
-  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
-}
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {}
 
-// Function to initialize app
-function init() {
-  inquirer.prompt(questions).then((inquirerResponses) => {
-    console.log('Generating README...');
-    writeToFile('README.md', generateMarkdown({ ...inquirerResponses }));
-  });
-}
+// TODO: Create a function to initialize app
+function init() {}
 
+// Function call to initialize app
 init();

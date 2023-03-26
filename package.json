@@ -1,13 +1,21 @@
 {
-  "name": "static-site",
+  "name": "readme-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A generator that can create a professional looking README file",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnamdionyeije/README-Generator.git"
+  },
+  "author": "Nnamdi Onyeije",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nnamdionyeije/README-Generator/issues"
+  },
+  "homepage": "https://github.com/nnamdionyeije/README-Generator#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
   }
