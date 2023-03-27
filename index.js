@@ -35,11 +35,12 @@ const questions = [
     type: 'input',
     name: 'test',
     message: 'What test instructions should the user know about?',
+    default: 'npm i'
   },
   {
     type: 'list',
     name: 'license',
-    message: ['APACHE 2.0', 'BSD 3', 'GPL 3.0', 'MIT', 'None'],
+    choices: ['APACHE 2.0', 'BSD 3', 'GPL 3.0', 'MIT', 'None'],
   },
   {
     type: 'input',
@@ -54,10 +55,18 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data); //need an explaination of this line
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer.prompt(questions).then((inquirerResponses) => {
+    console.log('Creating README');
+    writeToFile('README.md', generateMarkdown({...inquirerResponses}));
+  })
+  .then(() => console.log('Successfully wrote to README.md'))
+};
 
 // Function call to initialize app
 init();
