@@ -25,7 +25,7 @@ function renderLicenseSection(license) {
     return '';
   } else {
     return `## License
-  The license being used for this application is the ${license} license.`;
+The license being used for this application is the ${license} license.`;
   }
 }
 
@@ -54,7 +54,7 @@ ${renderLicenseLink(data.license)}
 
 ## Installation
 
-${data.description}
+${data.installation}
 
 
 ## Usage
@@ -62,7 +62,6 @@ ${data.description}
 ${data.usage}
 
 ${renderLicenseSection(data.license)}
-
 
 ## Contributing
 

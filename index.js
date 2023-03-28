@@ -35,7 +35,6 @@ const questions = [
     type: 'input',
     name: 'test',
     message: 'What test instructions should the user know about?',
-    default: 'npm i'
   },
   {
     type: 'list',
