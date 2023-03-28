@@ -8,6 +8,8 @@ This project generates a professional looking README.md file based on the user's
 
 ## Table of Contents
 
+- [Screenshots](#Screenshots)
+
 - [Installation](#installation)
 
 - [Usage](#usage)
@@ -19,6 +21,10 @@ This project generates a professional looking README.md file based on the user's
 - [Tests](#tests)
 
 - [Questions](#questions)
+
+## Screenshots
+
+![A screenshot of the VS Code terminal running the README Generator](./assets/images/README-Generator-Screenshot.png)
 
 ## Installation
 
